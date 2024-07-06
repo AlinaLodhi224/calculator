@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function calculator() {
+    // Prompting the user for inputs
+    let firstNumber = parseFloat(prompt("Enter the first number:"));
+    let secondNumber = parseFloat(prompt("Enter the second number:"));
+    let operation = prompt("Enter the operation (+, -, *, /, %):");
+
+    // Performing the calculation based on the operation
+    let result;
+
+    if (operation === '+') {
+        result = firstNumber + secondNumber;
+    } else if (operation === '-') {
+        result = firstNumber - secondNumber;
+    } else if (operation === '*') {
+        result = firstNumber * secondNumber;
+    } else if (operation === '/') {
+        if (secondNumber === 0) {
+            alert("Error: Division by zero!");
+            return; // Exit function if division by zero
+        }
+        result = firstNumber / secondNumber;
+    } else if (operation === '%') {
+        result = firstNumber % secondNumber;
+    } else {
+        alert("Invalid operation entered. Please enter one of: +, -, *, /, %");
+        return; // Exit function if invalid operation
+    }
+
+    // Displaying the result to the user
+    alert(`Result: ${result}`);
+}
+
+// Calling the function to start the calculator
+calculator();
+
+    
+
+
+
+    </script>
+</body>
+</html>
